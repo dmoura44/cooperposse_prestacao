@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Prestação de Contas — Cooperposse</title>
+  <meta name="description" content="Portal interativo de prestação de contas mensal da Cooperposse — Cooperativa dos Coletores de Material Reciclável de Santo Antônio de Posse.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <div class="app-layout">
+    <!-- MOBILE HEADER -->
+    <header class="mobile-header" id="mobile-header">
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir menu">
+        <i data-lucide="menu"></i>
+      </button>
+      <img src="Coperposse (2).png" alt="Logo Cooperposse" class="mobile-logo-img">
+      <span class="mobile-title">Portal Cooperposse</span>
+    </header>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar" id="sidebar" aria-label="Navegação principal">
+      <div class="sidebar-header">
+        <a href="#inicio" class="sidebar-logo" onclick="event.preventDefault(); App.router.navigate('#inicio');">
+          <img src="Coperposse (2).png" alt="Logo Cooperposse">
+          <div class="sidebar-logo-text">
+            <span class="sidebar-logo-title">Cooperposse</span>
+            <span class="sidebar-logo-subtitle">Prestação de Contas</span>
+          </div>
+        </a>
+      </div>
+      <div class="sidebar-nav" id="sidebar-nav"></div>
+      <div class="sidebar-footer">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Alternar tema">
+          <i data-lucide="moon"></i>
+          <span>Modo Escuro</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="main-content">
+
+      <!-- ===== SEÇÃO 1: INÍCIO ===== -->
+      <section id="inicio">
+        <div class="home-hero">
+          <img src="Coperposse (2).png" alt="Logo Cooperposse" class="home-hero-logo">
+          <div class="home-hero-text">
+            <h1>Portal de Prestação de Contas</h1>
+            <p>Guia mensal para OSCs parceiras da Prefeitura de Santo Antônio de Posse</p>
+          </div>
+        </div>
+
+        <div class="alert alert-warning">
+          <i data-lucide="alert-triangle"></i>
+          <div>
+            <div class="alert-title">⚠️ Atenção Normativa</div>
+            <div>A instrução normativa vigente é a <strong>Instrução Normativa TCESP nº 01/2024</strong>.<br>
+            NÃO faça referência à IN nº 01/2020 em NENHUM documento, ofício ou formulário.<br>
+            Documentos com referência à norma antiga serão <strong>devolvidos para correção</strong>.</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><i data-lucide="info"></i> Sobre a Prestação de Contas</div>
+          <ul class="info-list">
+            <li><i data-lucide="calendar"></i> A prestação de contas é sempre <strong>referente ao mês anterior</strong> à data de entrega</li>
+            <li><i data-lucide="arrow-right"></i> Exemplo: entrega em junho → prestação referente a maio</li>
+            <li><i data-lucide="file-text"></i> Baseada no <strong>Termo de Colaboração nº 12/2026</strong> (Aditivo Contratual nº 12/2026)</li>
+            <li><i data-lucide="clock"></i> Vigência: 01/01/2026 a 15/09/2026 &nbsp;|&nbsp; Valor: <strong>R$ 228.000,00</strong></li>
+            <li><i data-lucide="landmark"></i> Fonte de recurso: <strong>Municipal</strong></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><i data-lucide="send"></i> Destino dos Documentos</div>
+          <ul class="info-list">
+            <li><i data-lucide="copy"></i> Cópia do RP-10 assinada → <strong>Amanda</strong> (prestação de contas)</li>
+            <li><i data-lucide="file"></i> Original da Folha de Pagamento → <strong>Lumen</strong></li>
+            <li><i data-lucide="stamp"></i> Cópia da Folha de Pagamento carimbada → pasta da prestação de contas</li>
+            <li><i data-lucide="upload-cloud"></i> Todos os documentos digitalizados → upload no <strong>Portal de Transparência da Cooperposse</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 2: PREPARAÇÃO DA PASTA ===== -->
+      <section id="preparacao">
+        <h2>📁 Preparação da Pasta</h2>
+        <p class="section-subtitle">Monte a subpasta do mês com todos os documentos necessários antes de começar o preenchimento.</p>
+        <div class="step-list">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-body">
+              <div class="step-title">Crie a subpasta do mês</div>
+              <div class="step-desc">
+                <ul>
+                  <li>Dentro da pasta principal <strong>"Subvenção"</strong>, faça uma cópia da pasta do mês anterior</li>
+                  <li>Renomeie para o mês atual (ex: <code>Prestacao_Maio_2026</code>)</li>
+                  <li>Essa cópia serve como modelo de trabalho para a nova prestação</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-body">
+              <div class="step-title">Reúna os documentos necessários</div>
+              <div class="step-desc">
+                <p>Confirme que possui todos os itens abaixo:</p>
+                <ul class="mini-checklist" id="prep-checklist">
+                  <li onclick="App.miniCheck(this)"><div class="mini-check-box"><i data-lucide="check"></i></div><span>Extrato bancário do mês da prestação (conta principal)</span></li>
+                  <li onclick="App.miniCheck(this)"><div class="mini-check-box"><i data-lucide="check"></i></div><span>Extrato Rende Fácil do mês da prestação</span></li>
+                  <li onclick="App.miniCheck(this)"><div class="mini-check-box"><i data-lucide="check"></i></div><span>Comprovantes de pagamento do mês</span></li>
+                  <li onclick="App.miniCheck(this)"><div class="mini-check-box"><i data-lucide="check"></i></div><span>Planilha de contabilidade do mês (fornecida pela contabilidade)</span></li>
+                  <li onclick="App.miniCheck(this)"><div class="mini-check-box"><i data-lucide="check"></i></div><span>Folha de pagamento do mês</span></li>
+                  <li onclick="App.miniCheck(this)"><div class="mini-check-box"><i data-lucide="check"></i></div><span>Documentos/certificados para atualização no portal</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-body">
+              <div class="step-title">Atualize os arquivos e certificados nos portais</div>
+              <div class="step-desc">
+                <div class="placeholder-box">
+                  <i data-lucide="link"></i><br>
+                  Links e certificados a serem adicionados conforme orientação.<br>
+                  <em>Seção a configurar futuramente.</em>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 2B: CERTIDÕES (NOVA) ===== -->
+      <section id="certidoes">
+        <h2>📜 Certidões e Documentos Cadastrais</h2>
+        <p class="section-subtitle">CNPJ: <strong>08.706.538/0001-28</strong></p>
+        <div class="alert alert-info">
+          <i data-lucide="info"></i>
+          <div>Estas certidões devem ser renovadas periodicamente e mantidas atualizadas no sistema. Verifique a validade antes de cada prestação de contas.</div>
+        </div>
+        <div class="data-table-wrapper certidoes-table-wrapper">
+          <table class="data-table certidoes-table" id="certidoes-table">
+            <thead>
+              <tr>
+                <th style="width:36px">Nº</th>
+                <th>Certidão</th>
+                <th style="width:120px">Acessar</th>
+              </tr>
+            </thead>
+            <tbody id="certidoes-body"></tbody>
+          </table>
+        </div>
+        <div class="alert alert-info" style="margin-top:var(--space-lg);font-size:0.82rem;">
+          <i data-lucide="bookmark"></i>
+          <div>Modelos de declarações para prestação de contas disponíveis em: <a href="https://www.tce.sp.gov.br/legislacao/instrucao/instrucoes-012020" target="_blank" style="color:inherit;text-decoration:underline;">tce.sp.gov.br — Instruções</a> (verificar se há versão 2024)</div>
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 3: OFÍCIO ===== -->
+      <section id="oficio">
+        <h2>📄 Ofício de Encaminhamento</h2>
+        <p class="section-subtitle">Documento formal que encaminha a prestação de contas à Secretaria Municipal.</p>
+        <div class="step-list">
+          <div class="step-card"><div class="step-number">1</div><div class="step-body"><div class="step-title">Abra o modelo do mês anterior</div><div class="step-desc">Localize o ofício do mês anterior na pasta de trabalho e abra para edição.</div></div></div>
+          <div class="step-card"><div class="step-number">2</div><div class="step-body"><div class="step-title">Altere o número do ofício</div><div class="step-desc">Incremente o número sequencial do mês.<br>Exemplo: Ofício nº 04/2026 → <strong>Ofício nº 05/2026</strong></div></div></div>
+          <div class="step-card"><div class="step-number">3</div><div class="step-body"><div class="step-title">Altere todas as datas para o mês atual</div><div class="step-desc">Verifique cada data no corpo do ofício e atualize conforme necessário.</div></div></div>
+          <div class="step-card"><div class="step-number">4</div><div class="step-body"><div class="step-title">Verifique a referência normativa</div><div class="step-desc">Confirme que o ofício menciona: <strong>Instrução Normativa TCESP nº 01/2024</strong><br>Se mencionar 01/2020, <strong>corrija antes de imprimir</strong>.</div></div></div>
+          <div class="step-card"><div class="step-number">5</div><div class="step-body"><div class="step-title">Imprima, assine e inclua na pasta</div><div class="step-desc">Após conferir todos os dados, imprima, colha a assinatura e insira na pasta da prestação de contas.</div></div></div>
+        </div>
+        <div class="alert alert-info" style="margin-top:var(--space-lg);">
+          <i data-lucide="info"></i>
+          <div>Sempre confira se o ofício menciona a <strong>IN TCESP 01/2024</strong> antes de finalizar.</div>
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 4: RP-10 ===== -->
+      <section id="rp10">
+        <h2>📊 RP-10 — Documento Principal</h2>
+        <p class="section-subtitle">Seção mais importante da prestação de contas. Siga o tutorial e use a calculadora interativa.</p>
+
+        <!-- 4.1 Cabeçalho -->
+        <div class="expandable-header open" onclick="App.toggleExpand(this)">
+          <h3><i data-lucide="hash"></i> 4.1 — Cabeçalho e Identificação</h3>
+          <i data-lucide="chevron-down" class="chevron"></i>
+        </div>
+        <div class="expandable-body open">
+          <ul class="info-list">
+            <li><i data-lucide="edit-3"></i> Altere o <strong>mês</strong> e o <strong>exercício (ano)</strong></li>
+            <li><i data-lucide="file-text"></i> Verifique: Termo de Colaboração nº 12 / Aditivo nº 12/2026</li>
+            <li><i data-lucide="landmark"></i> Origem dos recursos: <strong>Municipal</strong></li>
+          </ul>
+        </div>
+
+        <!-- 4.2 Tabela superior -->
+        <div class="expandable-header" onclick="App.toggleExpand(this)">
+          <h3><i data-lucide="table"></i> 4.2 — Demonstrativo dos Recursos Disponíveis</h3>
+          <i data-lucide="chevron-down" class="chevron"></i>
+        </div>
+        <div class="expandable-body">
+          <h4>Colunas da tabela superior</h4>
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead><tr><th>Campo</th><th>Instrução</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Col. 1</strong> — Data prevista para o repasse</td><td>Manter sempre <strong>dia 10</strong> do mês (fixo)</td></tr>
+                <tr><td><strong>Col. 2</strong> — Valores previstos</td><td>Manter informação do mês anterior (não altera)</td></tr>
+                <tr><td><strong>Col. 3</strong> — Data do repasse</td><td>Localizar no <strong>extrato bancário</strong> a data real do crédito</td></tr>
+                <tr><td><strong>Col. 4</strong> — Nº do documento de crédito</td><td>Localizar no <strong>extrato bancário</strong> o número do documento</td></tr>
+                <tr><td><strong>Valores repassados</strong></td><td>Valor do repasse conforme extrato bancário</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h4 style="margin-top:var(--space-lg);">Linhas de totais</h4>
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead><tr><th>Campo</th><th>Como preencher</th></tr></thead>
+              <tbody>
+                <tr><td><strong>(A)</strong> Saldo do exercício anterior</td><td>Saldo bruto final do mês anterior no comprovante <strong>Rende Fácil</strong></td></tr>
+                <tr><td><strong>(B)</strong> Repasses públicos no exercício</td><td>Valor do(s) repasse(s) conforme extrato bancário do mês</td></tr>
+                <tr><td><strong>(C)</strong> Receitas com aplicações financeiras</td><td>Rendimento do Rende Fácil no mês, <strong>menos IOF e IR</strong> do resgate</td></tr>
+                <tr><td><strong>(D)</strong> Outras receitas</td><td>Normalmente R$ 0,00</td></tr>
+                <tr><td><strong>(E)</strong> Total de recursos públicos</td><td>Soma automática: A + B + C + D</td></tr>
+                <tr><td><strong>(F)</strong> Recursos próprios da entidade</td><td>Tarifa bancária de transferência (saldo remanescente)</td></tr>
+                <tr><td><strong>(G)</strong> Total de recursos disponíveis</td><td>Soma automática: E + F</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 4.2B Tabela gráfica explicativa -->
+        <div class="expandable-header" onclick="App.toggleExpand(this)">
+          <h3><i data-lucide="layout"></i> Visualização Gráfica do RP-10</h3>
+          <i data-lucide="chevron-down" class="chevron"></i>
+        </div>
+        <div class="expandable-body">
+          <!-- Tabela 1: Recursos -->
+          <h4>Demonstrativo dos Recursos Disponíveis</h4>
+          <div class="rp10-visual-table">
+            <div class="rp10-vrow rp10-vrow--input">
+              <span class="rp10-vlabel">(A) Saldo exercício anterior</span>
+              <span class="rp10-vbadge rp10-vbadge--blue"><i data-lucide="piggy-bank"></i> Rende Fácil — saldo bruto anterior</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--input">
+              <span class="rp10-vlabel">(B) Repasses públicos</span>
+              <span class="rp10-vbadge rp10-vbadge--blue"><i data-lucide="landmark"></i> Extrato bancário — crédito do repasse</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--input">
+              <span class="rp10-vlabel">(C) Receitas aplicações financeiras</span>
+              <span class="rp10-vbadge rp10-vbadge--blue"><i data-lucide="trending-up"></i> Rende Fácil — rendimento − IOF − IR</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--input">
+              <span class="rp10-vlabel">(D) Outras receitas</span>
+              <span class="rp10-vbadge rp10-vbadge--muted">Normalmente R$ 0,00</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--calc">
+              <span class="rp10-vlabel">(E) Total recursos públicos</span>
+              <span class="rp10-vbadge rp10-vbadge--green"><i data-lucide="sigma"></i> Calculado: A + B + C + D</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--input">
+              <span class="rp10-vlabel">(F) Recursos próprios da entidade</span>
+              <span class="rp10-vbadge rp10-vbadge--muted">Se houver tarifa inter-bancos</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--total">
+              <span class="rp10-vlabel">(G) Total disponível no exercício</span>
+              <span class="rp10-vbadge rp10-vbadge--green"><i data-lucide="sigma"></i> Calculado: E + F</span>
+            </div>
+          </div>
+
+          <h4 style="margin-top:var(--space-xl)">Demonstrativo das Despesas</h4>
+          <div class="rp10-visual-table">
+            <div class="rp10-vrow rp10-vrow--expense">
+              <span class="rp10-vlabel">Recursos humanos</span>
+              <span class="rp10-vbadge rp10-vbadge--amber"><i data-lucide="users"></i> Folha de pagamento — salário bruto</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--expense">
+              <span class="rp10-vlabel">Locação de imóveis</span>
+              <span class="rp10-vbadge rp10-vbadge--amber"><i data-lucide="home"></i> R$ 2.500,00 fixo</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--expense">
+              <span class="rp10-vlabel">Combustível</span>
+              <span class="rp10-vbadge rp10-vbadge--amber"><i data-lucide="fuel"></i> Comprovantes / extrato</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--expense">
+              <span class="rp10-vlabel">Despesas bancárias</span>
+              <span class="rp10-vbadge rp10-vbadge--amber"><i data-lucide="credit-card"></i> Extrato — tarifas PIX/TED</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--total">
+              <span class="rp10-vlabel">(J) Total despesas pagas</span>
+              <span class="rp10-vbadge rp10-vbadge--green"><i data-lucide="sigma"></i> Soma de todas as despesas</span>
+            </div>
+          </div>
+
+          <h4 style="margin-top:var(--space-xl)">Demonstrativo do Saldo Financeiro</h4>
+          <div class="rp10-visual-table">
+            <div class="rp10-vrow rp10-vrow--calc">
+              <span class="rp10-vlabel">(G) Total recursos disponíveis</span>
+              <span class="rp10-vbadge rp10-vbadge--muted">Espelho do valor acima</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--calc">
+              <span class="rp10-vlabel">(J) Despesas pagas</span>
+              <span class="rp10-vbadge rp10-vbadge--muted">Espelho do valor acima</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--highlight">
+              <span class="rp10-vlabel"><i data-lucide="check-circle" style="color:var(--color-success);width:18px;height:18px;vertical-align:middle;margin-right:4px"></i> (K) Recurso público não aplicado</span>
+              <span class="rp10-vbadge rp10-vbadge--green-strong"><i data-lucide="shield-check"></i> DEVE coincidir com saldo bruto Rende Fácil</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--calc">
+              <span class="rp10-vlabel">(L) Valor devolvido</span>
+              <span class="rp10-vbadge rp10-vbadge--muted">R$ 0,00 (fixo)</span>
+            </div>
+            <div class="rp10-vrow rp10-vrow--calc">
+              <span class="rp10-vlabel">(M) Valor autorizado p/ exerc. seguinte</span>
+              <span class="rp10-vbadge rp10-vbadge--green"><i data-lucide="sigma"></i> K − L</span>
+            </div>
+          </div>
+
+          <!-- Legenda -->
+          <div class="rp10-legend">
+            <span class="rp10-legend-item"><span class="rp10-legend-dot" style="background:#dbeafe"></span> Dados de entrada (extrato/Rende Fácil)</span>
+            <span class="rp10-legend-item"><span class="rp10-legend-dot" style="background:#fef3c7"></span> Despesas (comprovantes)</span>
+            <span class="rp10-legend-item"><span class="rp10-legend-dot" style="background:#d1fae5"></span> Campos calculados automaticamente</span>
+            <span class="rp10-legend-item"><span class="rp10-legend-dot" style="background:#6ee7b7;border:2px solid #059669"></span> Campo crítico — verificação obrigatória</span>
+          </div>
+        </div>
+
+        <!-- 4.3 Calculadora -->
+        <div class="expandable-header open" onclick="App.toggleExpand(this)">
+          <h3><i data-lucide="calculator"></i> 4.3 — Calculadora Interativa do RP-10</h3>
+          <i data-lucide="chevron-down" class="chevron"></i>
+        </div>
+        <div class="expandable-body open">
+          <div class="calculator-panel" id="rp10-calculator">
+            <div class="calculator-title"><i data-lucide="calculator"></i> Calculadora RP-10</div>
+
+            <!-- RECURSOS -->
+            <div class="calc-section">
+              <div class="calc-section-title">Recursos Disponíveis</div>
+              <div class="calc-row">
+                <div class="calc-label"><strong>[A]</strong> Saldo do exercício anterior (Rende Fácil — último saldo bruto)</div>
+                <div class="calc-input-wrapper">
+                  <span class="calc-input-prefix">R$</span>
+                  <input type="text" class="calc-input money-input" id="calc-a" placeholder="0,00" inputmode="numeric">
+                </div>
+              </div>
+              <div class="calc-row">
+                <div class="calc-label"><strong>[B]</strong> Repasses públicos no exercício (do extrato bancário)</div>
+              </div>
+              <div class="repasse-list" id="repasse-list">
+                <div class="repasse-entry">
+                  <div class="calc-input-wrapper">
+                    <span class="calc-input-prefix">R$</span>
+                    <input type="text" class="calc-input money-input repasse-input" placeholder="0,00" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-outline btn-sm" style="margin-top:var(--space-sm)" onclick="App.calculator.addRepasse()">
+                <i data-lucide="plus-circle"></i> Adicionar repasse
+              </button>
+
+              <hr class="calc-divider">
+              <div class="calc-section-title">Receitas de Aplicação Financeira</div>
+              <div class="calc-row">
+                <div class="calc-label">Rendimento bruto Rende Fácil</div>
+                <div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input" id="calc-rend" placeholder="0,00" inputmode="numeric"></div>
+              </div>
+              <div class="calc-row">
+                <div class="calc-label">IOF retido</div>
+                <div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input" id="calc-iof" placeholder="0,00" inputmode="numeric"></div>
+              </div>
+              <div class="calc-row">
+                <div class="calc-label">IR retido</div>
+                <div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input" id="calc-ir" placeholder="0,00" inputmode="numeric"></div>
+              </div>
+              <div class="calc-row">
+                <div class="calc-label"><strong>[C]</strong> Receita líquida = Rendimento − IOF − IR</div>
+                <div class="calc-result-wrapper"><span class="calc-input-prefix">R$</span><span class="calc-result-value" id="calc-c">0,00</span></div>
+              </div>
+              <hr class="calc-divider">
+              <div class="calc-row">
+                <div class="calc-label"><strong>[D]</strong> Outras receitas</div>
+                <div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input" id="calc-d" placeholder="0,00" inputmode="numeric"></div>
+              </div>
+            </div>
+
+            <div class="calc-total-row">
+              <div class="calc-row">
+                <div class="calc-label"><strong>[E]</strong> TOTAL DE RECURSOS PÚBLICOS (A + B + C + D)</div>
+                <div class="calc-result-wrapper" style="padding-right:4px">
+                  <span class="calc-input-prefix">R$</span><span class="calc-result-value" style="flex:1" id="calc-e">0,00</span>
+                  <button class="btn-icon" onclick="App.calculator.copyField('calc-e')" title="Copiar"><i data-lucide="copy"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-row" style="margin-top:var(--space-md)">
+              <div class="calc-label"><strong>[F]</strong> Recursos próprios (tarifa inter-bancos, se houver)</div>
+              <div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input" id="calc-f" placeholder="0,00" inputmode="numeric"></div>
+            </div>
+
+            <div class="calc-total-row" style="margin-top:var(--space-md)">
+              <div class="calc-row">
+                <div class="calc-label"><strong>[G]</strong> TOTAL DISPONÍVEL NO EXERCÍCIO (E + F)</div>
+                <div class="calc-result-wrapper" style="padding-right:4px">
+                  <span class="calc-input-prefix">R$</span><span class="calc-result-value" style="flex:1" id="calc-g">0,00</span>
+                  <button class="btn-icon" onclick="App.calculator.copyField('calc-g')" title="Copiar"><i data-lucide="copy"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <hr class="calc-divider thick">
+
+            <!-- DESPESAS -->
+            <div class="calc-section">
+              <div class="calc-section-title">Despesas — Tabela de Origem Municipal</div>
+
+              <!-- RH Detalhado -->
+              <div class="rh-panel" id="rh-panel">
+                <div class="rh-panel-header" onclick="App.calculator.toggleRH()">
+                  <span><i data-lucide="users"></i> Recursos Humanos — Detalhamento da Folha</span>
+                  <i data-lucide="chevron-down" class="rh-chevron" id="rh-chevron" style="transform:rotate(180deg)"></i>
+                </div>
+                <div class="rh-panel-body open" id="rh-panel-body">
+                  <div class="rh-entries" id="rh-entries">
+                    <div class="rh-entry">
+                      <div class="calc-input-wrapper">
+                        <span class="calc-input-prefix">R$</span>
+                        <input type="text" class="calc-input money-input rh-value-input" placeholder="0,00" inputmode="numeric" onkeypress="App.calculator.handleRHEnter(event, this)">
+                      </div>
+                      <button class="remove-entry-btn" onclick="App.calculator.removeRH(this)" title="Remover"><i data-lucide="x"></i></button>
+                    </div>
+                  </div>
+                  <button class="btn btn-outline btn-sm" onclick="App.calculator.addRH()">
+                    <i data-lucide="plus-circle"></i> Adicionar colaborador
+                  </button>
+                  <div class="rh-total">
+                    <span>TOTAL RECURSOS HUMANOS:</span>
+                    <span class="rh-total-value" id="rh-total-value">R$ 0,00</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="calc-row">
+                <div class="calc-label">Locação de imóveis</div>
+                <div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input desp-input" id="calc-loc" value="2.500,00" inputmode="numeric"></div>
+              </div>
+              <div class="calc-row">
+                <div class="calc-label">Combustível</div>
+                <div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input desp-input" id="calc-comb" placeholder="0,00" inputmode="numeric"></div>
+              </div>
+              <div class="calc-row">
+                <div class="calc-label">Despesas financeiras/bancárias (tarifas PIX, TED, etc.)</div>
+                <div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input desp-input" id="calc-fin" placeholder="0,00" inputmode="numeric"></div>
+              </div>
+              <div class="calc-row">
+                <div class="calc-label">Outras despesas</div>
+                <div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input desp-input" id="calc-out" placeholder="0,00" inputmode="numeric"></div>
+              </div>
+            </div>
+
+            <div class="calc-total-row">
+              <div class="calc-row">
+                <div class="calc-label"><strong>[J]</strong> TOTAL DESPESAS PAGAS NO EXERCÍCIO (H + I)</div>
+                <div class="calc-result-wrapper" style="padding-right:4px">
+                  <span class="calc-input-prefix">R$</span><span class="calc-result-value" style="flex:1" id="calc-j">0,00</span>
+                  <button class="btn-icon" onclick="App.calculator.copyField('calc-j')" title="Copiar"><i data-lucide="copy"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <hr class="calc-divider thick">
+
+            <!-- DEMONSTRATIVO DO SALDO -->
+            <div class="calc-section">
+              <div class="calc-section-title">Demonstrativo do Saldo Financeiro</div>
+              <div class="calc-row">
+                <div class="calc-label"><strong>[G]</strong> Total de recursos disponíveis</div>
+                <div class="calc-result-wrapper"><span class="calc-input-prefix">R$</span><span class="calc-result-value" id="calc-g2">0,00</span></div>
+              </div>
+              <div class="calc-row">
+                <div class="calc-label"><strong>[J]</strong> Despesas pagas no exercício</div>
+                <div class="calc-result-wrapper"><span class="calc-input-prefix">R$</span><span class="calc-result-value" id="calc-j2">0,00</span></div>
+              </div>
+              <div class="calc-row">
+                <div class="calc-label"><strong>[K]</strong> Recurso público não aplicado [E − (J − F)]</div>
+                <div class="calc-result-wrapper" style="padding-right:4px">
+                  <span class="calc-input-prefix">R$</span><span class="calc-result-value" style="flex:1" id="calc-k">0,00</span>
+                  <button class="btn-icon" onclick="App.calculator.copyField('calc-k')" title="Copiar"><i data-lucide="copy"></i></button>
+                </div>
+              </div>
+              <div class="calc-row" style="margin-top:var(--space-md)">
+                <div class="calc-label">🔍 Saldo bruto do Rende Fácil (para conferência)</div>
+                <div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input" id="calc-rende-check" placeholder="0,00" inputmode="numeric"></div>
+              </div>
+              <div id="validation-result">
+                <div class="validation-indicator neutral"><i data-lucide="minus-circle"></i><span>Informe o saldo do Rende Fácil para verificação</span></div>
+              </div>
+              <hr class="calc-divider">
+              <div class="calc-row">
+                <div class="calc-label"><strong>[L]</strong> Valor devolvido ao órgão público</div>
+                <div class="calc-result-wrapper"><span class="calc-input-prefix">R$</span><span class="calc-result-value">0,00</span></div>
+              </div>
+              <div class="calc-row">
+                <div class="calc-label"><strong>[M]</strong> Valor autorizado para exercício seguinte (K − L)</div>
+                <div class="calc-result-wrapper" style="padding-right:4px">
+                  <span class="calc-input-prefix">R$</span><span class="calc-result-value" style="flex:1" id="calc-m">0,00</span>
+                  <button class="btn-icon" onclick="App.calculator.copyField('calc-m')" title="Copiar"><i data-lucide="copy"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <hr class="calc-divider">
+            <div class="btn-group">
+              <button class="btn btn-primary" onclick="App.calculator.copyToClipboard()"><i data-lucide="clipboard-copy"></i> Copiar Resumo para colar no Word</button>
+              <button class="btn btn-ghost" onclick="App.calculator.reset()"><i data-lucide="rotate-ccw"></i> Limpar Calculadora</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.4 Tabela despesas -->
+        <div class="expandable-header" onclick="App.toggleExpand(this)">
+          <h3><i data-lucide="list-ordered"></i> 4.4 — Tabela de Despesas por Categoria</h3>
+          <i data-lucide="chevron-down" class="chevron"></i>
+        </div>
+        <div class="expandable-body">
+          <div class="data-table-wrapper">
+            <table class="data-table">
+              <thead><tr><th>Categoria</th><th>Instrução</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Recursos humanos (5)</strong></td><td>Total da folha de pagamento — <strong>salário bruto</strong> de todos os colaboradores</td></tr>
+                <tr><td><strong>Locação de imóveis</strong></td><td>R$ 2.500,00 (valor fixo mensal — manter)</td></tr>
+                <tr><td><strong>Combustível</strong></td><td>Consultar extrato ou comprovantes — valor variável</td></tr>
+                <tr><td><strong>Despesas financeiras e bancárias</strong></td><td>Soma de todas as tarifas de PIX, TED, tarifas bancárias — extrair do extrato</td></tr>
+                <tr><td><strong>Outros campos</strong></td><td>Preencher somente se houver movimentação correspondente</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="alert alert-info">
+            <i data-lucide="info"></i>
+            <div><strong>Coluna H</strong>: Despesas contabilizadas E pagas neste exercício<br>
+            <strong>Coluna I</strong>: Despesas contabilizadas neste exercício a pagar em exercício seguinte (normalmente vazio)<br>
+            <strong>Total J = H + I</strong></div>
+          </div>
+        </div>
+
+        <div class="expandable-header" onclick="App.toggleExpand(this)">
+          <h3><i data-lucide="landmark"></i> 4.5 — Conciliação Bancária / Rende Fácil</h3>
+          <i data-lucide="chevron-down" class="chevron"></i>
+        </div>
+        <div class="expandable-body">
+          <p class="section-subtitle">Concilie os dados do Rende Fácil e do extrato bancário com o RP-10.</p>
+          <div class="step-list" style="margin-bottom:var(--space-lg)">
+            <div class="step-card"><div class="step-number">1</div><div class="step-body"><div class="step-title">Acesse o extrato Rende Fácil</div><div class="step-desc"><ul><li><strong>Último saldo bruto</strong> → campo (A) do RP-10 / verificação (K)</li><li><strong>Rendimento bruto do mês</strong> → cálculo do campo (C)</li><li><strong>IOF retido</strong> → subtrair do rendimento</li><li><strong>IR retido</strong> → subtrair do rendimento</li></ul></div></div></div>
+            <div class="step-card"><div class="step-number">2</div><div class="step-body"><div class="step-title">Acesse o extrato bancário principal</div><div class="step-desc"><ul><li>Créditos de repasse (data + nº do documento) → tabela superior do RP-10</li><li>Pagamentos realizados → tabela de despesas</li></ul></div></div></div>
+            <div class="step-card"><div class="step-number">3</div><div class="step-body"><div class="step-title">Confirme a conciliação</div><div class="step-desc">O saldo final do extrato bancário deve coincidir com o campo <strong>(K)</strong> do RP-10.</div></div></div>
+          </div>
+          <div class="calculator-panel" style="margin-bottom:0">
+            <div class="calculator-title"><i data-lucide="calculator"></i> Calculadora Auxiliar — Rendimento Líquido</div>
+            <div class="calc-row"><div class="calc-label">Rendimento bruto</div><div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input" id="aux-rend" placeholder="0,00" inputmode="numeric"></div></div>
+            <div class="calc-row"><div class="calc-label">(−) IOF</div><div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input" id="aux-iof" placeholder="0,00" inputmode="numeric"></div></div>
+            <div class="calc-row"><div class="calc-label">(−) IR</div><div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input" id="aux-ir" placeholder="0,00" inputmode="numeric"></div></div>
+            <hr class="calc-divider">
+            <div class="calc-row"><div class="calc-label"><strong>= Receita líquida (C)</strong></div><div class="calc-result-wrapper"><span class="calc-input-prefix">R$</span><span class="calc-result-value" id="aux-result">0,00</span></div></div>
+            <button class="btn btn-outline btn-sm" style="margin-top:var(--space-md)" onclick="App.calculator.copyAux()"><i data-lucide="clipboard-copy"></i> Copiar resultado para a área (C) acima</button>
+          </div>
+        </div>
+
+        <!-- 4.6 Finalização -->
+        <div class="expandable-header" onclick="App.toggleExpand(this)">
+          <h3><i data-lucide="check-circle"></i> 4.6 — Finalização do RP-10</h3>
+          <i data-lucide="chevron-down" class="chevron"></i>
+        </div>
+        <div class="expandable-body">
+          <div class="step-list">
+            <div class="step-card"><div class="step-number">1</div><div class="step-body"><div class="step-title">Confirme valores</div><div class="step-desc">Confirme que o valor total de despesas (J) bate com os comprovantes</div></div></div>
+            <div class="step-card"><div class="step-number">2</div><div class="step-body"><div class="step-title">Verificação K = Rende Fácil</div><div class="step-desc">Confirme que (K) = saldo bruto Rende Fácil</div></div></div>
+            <div class="step-card"><div class="step-number">3</div><div class="step-body"><div class="step-title">Impressão em duas vias</div><div class="step-desc"><ul><li><strong>Via 1</strong> → Presidente assina → envia para <strong>Amanda</strong></li><li><strong>Via 2</strong> → Arquivar na pasta física</li></ul></div></div></div>
+            <div class="step-card"><div class="step-number">4</div><div class="step-body"><div class="step-title">Digitalizar e fazer upload</div><div class="step-desc">Digitalize e faça upload no Portal de Transparência da Cooperposse</div></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 5: RELATÓRIO ===== -->
+      <section id="relatorio">
+        <h2>📋 Relatório de Execução do Objeto</h2>
+        <p class="section-subtitle">Documento narrativo descrevendo o que foi executado com os recursos no mês.</p>
+        <div class="card">
+          <div class="card-title"><i data-lucide="file-text"></i> O que é</div>
+          <p style="color:var(--color-text-secondary);font-size:0.9rem;">Documento narrativo que descreve as ações e atividades realizadas pela Cooperposse no mês de referência, com base nos recursos recebidos via Termo de Colaboração.</p>
+        </div>
+        <div class="step-list">
+          <div class="step-card"><div class="step-number">1</div><div class="step-body"><div class="step-title">Descreva as ações realizadas</div><div class="step-desc">Serviços de coleta, atividades da cooperativa e demais ações executadas no mês.</div></div></div>
+          <div class="step-card"><div class="step-number">2</div><div class="step-body"><div class="step-title">Use linguagem objetiva e factual</div><div class="step-desc">Evite textos genéricos. Descreva com precisão o que foi feito.</div></div></div>
+          <div class="step-card"><div class="step-number">3</div><div class="step-body"><div class="step-title">Referencie o Termo de Colaboração</div><div class="step-desc">Mencione o <strong>Termo de Colaboração nº 12/2026</strong>.</div></div></div>
+          <div class="step-card"><div class="step-number">4</div><div class="step-body"><div class="step-title">Mencione os principais gastos</div><div class="step-desc">Cite folha de pagamento, aluguel, combustível e demais despesas relevantes.</div></div></div>
+          <div class="step-card"><div class="step-number">5</div><div class="step-body"><div class="step-title">Assine e inclua na pasta</div><div class="step-desc">Assine o relatório e inclua na pasta da prestação de contas.</div></div></div>
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 7: PC-02 ===== -->
+      <section id="pc02">
+        <h2>💳 PC-02 — Termo de Consentimento de Contas Bancárias</h2>
+        <p class="section-subtitle">Documento que autoriza a fiscalização das contas bancárias da OSC pelo órgão público.</p>
+        <div class="card">
+          <div class="card-title"><i data-lucide="shield-check"></i> Orientações</div>
+          <ul class="info-list">
+            <li><i data-lucide="file-check"></i> Autoriza a fiscalização das contas bancárias da OSC pelo órgão público</li>
+            <li><i data-lucide="calendar"></i> Atualizar com dados do período vigente</li>
+            <li><i data-lucide="pen-tool"></i> Assinar e incluir na pasta da prestação de contas</li>
+            <li><i data-lucide="alert-circle"></i> Observar se há <strong>novas contas bancárias</strong> a incluir</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 8: FOLHA ===== -->
+      <section id="folha">
+        <h2>🗂️ Folha de Pagamento — Procedimento e Carimbos</h2>
+        <p class="section-subtitle">Procedimento completo para tratamento e distribuição da folha de pagamento mensal.</p>
+        <div class="step-list">
+          <div class="step-card"><div class="step-number">1</div><div class="step-body"><div class="step-title">Receba a folha de pagamento</div><div class="step-desc">Receba a folha de pagamento do mês da contabilidade.</div></div></div>
+          <div class="step-card"><div class="step-number">2</div><div class="step-body"><div class="step-title">Carimbe com o Termo de Colaboração</div><div class="step-desc"><ul><li>Recurso: <strong>Municipal</strong></li><li>Número: <strong>Termo de Colaboração nº 12 / Aditivo Contratual nº 12/2026</strong></li></ul></div></div></div>
+          <div class="step-card"><div class="step-number">3</div><div class="step-body"><div class="step-title">Faça duas cópias</div><div class="step-desc"><ul><li><strong>Original</strong> → enviar para <strong>Lumen</strong></li><li><strong>Cópia carimbada</strong> → incluir na pasta da prestação (para Amanda)</li></ul></div></div></div>
+          <div class="step-card"><div class="step-number">4</div><div class="step-body"><div class="step-title">Lance no RP-10</div><div class="step-desc">O valor total da folha (<strong>salário bruto</strong>) deve ser lançado no RP-10 como "Recursos humanos".</div></div></div>
+        </div>
+        <div class="alert alert-info" style="margin-top:var(--space-lg)"><i data-lucide="lightbulb"></i><div>💡 O valor de Recursos Humanos no RP-10 deve corresponder ao <strong>salário bruto total</strong> da folha de pagamento do mês.</div></div>
+      </section>
+
+      <!-- ===== SEÇÃO 9: CHECKLIST ===== -->
+      <section id="checklist">
+        <h2>✅ Checklist Geral</h2>
+        <p class="section-subtitle">Marque cada item conforme for concluindo. A barra de progresso acompanha o andamento.</p>
+        <div class="ref-month-input">
+          <label for="ref-month">Mês de referência:</label>
+          <input type="text" id="ref-month" placeholder="Ex: Maio 2026">
+        </div>
+        <div class="checklist-progress-bar-wrapper" id="checklist-progress">
+          <div class="checklist-progress-header">
+            <span class="checklist-progress-text" id="checklist-count">0 de 22 itens concluídos</span>
+            <span class="checklist-progress-pct" id="checklist-pct">0%</span>
+          </div>
+          <div class="checklist-progress-track">
+            <div class="checklist-progress-fill" id="checklist-fill"></div>
+          </div>
+        </div>
+        <div id="checklist-container"></div>
+        <div class="btn-group" style="margin-top:var(--space-lg)">
+          <button class="btn btn-warning" onclick="App.checklist.reset()"><i data-lucide="rotate-ccw"></i> Resetar Checklist</button>
+        </div>
+      </section>
+
+      <!-- ===== SEÇÃO 10: ERROS ===== -->
+      <section id="erros">
+        <h2>⚠️ Erros Comuns — Referência Rápida</h2>
+        <p class="section-subtitle">Erros frequentes identificados nas prestações anteriores. Confira antes de entregar.</p>
+        <div class="error-card"><div class="error-card-header"><span class="error-card-icon">❌</span><span class="error-card-title">Referência à IN 01/2020</span></div><div class="error-card-problem"><strong>Problema:</strong> Ofícios e documentos ainda citando a norma antiga.</div><div class="error-card-solution"><i data-lucide="check-circle"></i><span><strong>Correto:</strong> Instrução Normativa TCESP nº <strong>01/2024</strong></span></div></div>
+        <div class="error-card"><div class="error-card-header"><span class="error-card-icon">❌</span><span class="error-card-title">Campo (K) não coincide com o Rende Fácil</span></div><div class="error-card-problem"><strong>Problema:</strong> Erro de cálculo ou lançamento errado nas despesas.</div><div class="error-card-solution"><i data-lucide="check-circle"></i><span><strong>Solução:</strong> Usar a calculadora do RP-10 e conferir o saldo bruto do extrato Rende Fácil.</span></div></div>
+        <div class="error-card"><div class="error-card-header"><span class="error-card-icon">❌</span><span class="error-card-title">Data prevista de repasse errada</span></div><div class="error-card-problem"><strong>Problema:</strong> Coluna 1 da tabela superior sendo alterada incorretamente.</div><div class="error-card-solution"><i data-lucide="check-circle"></i><span><strong>Correto:</strong> Manter sempre <strong>dia 10</strong> do mês.</span></div></div>
+        <div class="error-card"><div class="error-card-header"><span class="error-card-icon">❌</span><span class="error-card-title">Folha de pagamento sem carimbo</span></div><div class="error-card-problem"><strong>Problema:</strong> Folha encaminhada sem identificação do Termo de Colaboração.</div><div class="error-card-solution"><i data-lucide="check-circle"></i><span><strong>Correto:</strong> Carimbar com "Termo de Colaboração nº 12 / Aditivo 12/2026 — Recurso Municipal".</span></div></div>
+        <div class="error-card"><div class="error-card-header"><span class="error-card-icon">❌</span><span class="error-card-title">Recursos humanos com valor errado no RP-10</span></div><div class="error-card-problem"><strong>Problema:</strong> Lançar salário líquido em vez do salário bruto.</div><div class="error-card-solution"><i data-lucide="check-circle"></i><span><strong>Correto:</strong> Usar o <strong>total bruto</strong> da folha de pagamento.</span></div></div>
+        <div class="error-card"><div class="error-card-header"><span class="error-card-icon">❌</span><span class="error-card-title">Receita de aplicação financeira calculada errada</span></div><div class="error-card-problem"><strong>Problema:</strong> Usar rendimento bruto sem descontar IOF e IR.</div><div class="error-card-solution"><i data-lucide="check-circle"></i><span><strong>Correto:</strong> Rendimento − IOF − IR = valor a lançar no campo (C).</span></div></div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FLOATING: Progress Ring -->
+  <div class="progress-ring-container" id="progress-ring-container" title="Progresso do Checklist">
+    <svg class="progress-ring-svg" width="56" height="56" viewBox="0 0 56 56">
+      <circle class="progress-ring-track" cx="28" cy="28" r="24" fill="none" stroke-width="5"/>
+      <circle class="progress-ring-fill" id="progress-ring-fill" cx="28" cy="28" r="24" fill="none" stroke-width="5"
+        stroke-dasharray="150.796" stroke-dashoffset="150.796" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+    </svg>
+    <span class="progress-ring-text" id="progress-ring-text">0%</span>
+  </div>
+
+  <!-- FLOATING: Scroll to Top -->
+  <button class="scroll-top-btn" id="scroll-top-btn" title="Voltar ao topo" aria-label="Voltar ao topo">
+    <i data-lucide="chevrons-up"></i>
+  </button>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <i data-lucide="check-circle"></i>
+    <span id="toast-msg">Copiado!</span>
+  </div>
+
+  <script>
+    // ============================================
+    // CURRENCY FORMATTING
+    // ============================================
+    function formatCurrency(input) {
+      let val = input.value.replace(/\D/g, '');
+      if (val === '') { input.value = ''; return; }
+      let num = (parseInt(val, 10) / 100).toFixed(2);
+      input.value = new Intl.NumberFormat('pt-BR', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      }).format(num);
+    }
+
+    function parseCurrency(input) {
+      if (!input || !input.value) return 0;
+      return parseFloat(input.value.replace(/\./g, '').replace(',', '.') || '0');
+    }
+
+    function fmtBR(num) {
+      return new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(num);
+    }
+
+    // Attach to all money inputs (delegated)
+    document.addEventListener('input', function(e) {
+      if (e.target.classList.contains('money-input')) {
+        formatCurrency(e.target);
+        App.calculator.compute();
+      }
+    });
+
+    // ============================================
+    // APPLICATION
+    // ============================================
+    const App = {
+      state: {
+        currentSection: 'inicio',
+        sectionStatuses: {},
+        checklistItems: {},
+        calculatorValues: {},
+        rhExpanded: true,
+        certidoes: []
+      },
+
+      navConfig: [
+        { id: 'inicio',      icon: 'home',              label: 'Início' },
+        { id: 'preparacao',   icon: 'folder-open',       label: 'Preparação da Pasta' },
+        { id: 'certidoes',    icon: 'scroll-text',       label: 'Certidões' },
+        { id: 'oficio',       icon: 'file-text',         label: 'Ofício de Encaminhamento' },
+        { id: 'rp10',         icon: 'bar-chart-3',       label: 'RP-10 (Doc Principal)' },
+        { id: 'relatorio',    icon: 'clipboard-list',    label: 'Relatório de Execução' },
+        { id: 'pc02',         icon: 'credit-card',       label: 'PC-02 (Contas Bancárias)' },
+        { id: 'folha',        icon: 'file-spreadsheet',  label: 'Folha de Pagamento' },
+        { id: 'checklist',    icon: 'check-square',      label: 'Checklist Geral' },
+        { id: 'erros',        icon: 'alert-triangle',    label: 'Erros Comuns' }
+      ],
+
+      certidoesConfig: [
+        { num: 1, nome: 'Prova de inscrição no CNPJ — Cadastro Nacional da Pessoa Jurídica', url: 'https://solucoes.receita.fazenda.gov.br/Servicos/cnpjreva/', nota: '' },
+        { num: 2, nome: 'Cadastro de Contribuintes Municipal', url: 'http://servicos.pmsaposse.sp.gov.br:8080/servicosweb/home.jsf', nota: 'Acesso: mobiliário 4049 / senha: 3gjwisqxg2xcxxu' },
+        { num: 3, nome: 'Certidão Negativa de Débitos Federais e Dívida Ativa da União (CND Federal) — SRF', url: 'https://servicos.receitafederal.gov.br/servico/certidoes/#/home', nota: '' },
+        { num: 4, nome: 'Certidão Negativa de Débitos Estaduais — SP', url: 'https://www10.fazenda.sp.gov.br/CertidaoNegativaDeb/Pages/EmissaoCertidaoNegativa.aspx', nota: '' },
+        { num: 5, nome: 'Certidão Negativa de Débitos Tributários Municipais e Dívida Ativa Municipal', url: 'http://servicos.pmsaposse.sp.gov.br:8080/servicosweb/home.jsf', nota: '' },
+        { num: 6, nome: 'Certificado de Regularidade FGTS (CRF) — Caixa Econômica Federal', url: 'https://consulta-crf.caixa.gov.br/consultacrf/pages/consultaEmpregador.jsf', nota: '' },
+        { num: 7, nome: 'Certidão Negativa de Débitos Trabalhistas (CNDT) — TST', url: 'https://cndt-certidao.tst.jus.br/inicio.faces', nota: '' },
+        { num: 8, nome: 'Atualização Cadastral CADTCESP', url: 'https://www.tce.sp.gov.br/cadtcesp/#!/pessoa/cadastro', nota: '' }
+      ],
+
+      checklistConfig: [
+        { group: 'Preparação', items: ['Pasta do mês criada (cópia do mês anterior)','Extrato bancário do mês reunido','Extrato Rende Fácil do mês reunido','Comprovantes de pagamento reunidos','Planilha de contabilidade recebida','Folha de pagamento recebida da contabilidade'] },
+        { group: 'Documentos a Preencher', items: ['Ofício de encaminhamento — número e datas atualizados','Ofício menciona IN TCESP 01/2024 (não 01/2020)','RP-10 preenchido — tabela de recursos','RP-10 preenchido — tabela de despesas','RP-10 verificado — (K) coincide com saldo Rende Fácil','Relatório de Execução do Objeto preenchido','Conciliação bancária realizada','PC-02 atualizado e assinado'] },
+        { group: 'Folha de Pagamento', items: ['Folha carimbada com Termo de Colaboração nº 12 / Aditivo 12/2026','Original enviado para Lumen','Cópia incluída na pasta da prestação'] },
+        { group: 'Impressão e Assinatura', items: ['RP-10 impresso em 2 vias','Presidente assinou as duas vias','Via 1 do RP-10 entregue para Amanda','Via 2 do RP-10 arquivada na pasta física'] },
+        { group: 'Digitalização e Upload', items: ['Todos os documentos digitalizados','Upload realizado no Portal de Transparência da Cooperposse'] },
+        { group: 'Entrega', items: ['Pasta entregue para Amanda (prestação de contas completa)'] }
+      ],
+
+      statusCycle: ['pendente', 'andamento', 'concluido'],
+      statusLabels: { pendente: 'Pendente', andamento: 'Em andamento', concluido: 'Concluído' },
+
+      init() {
+        this.navConfig.forEach(n => this.state.sectionStatuses[n.id] = 'pendente');
+        let idx = 0;
+        this.checklistConfig.forEach(g => g.items.forEach(() => { this.state.checklistItems[idx] = false; idx++; }));
+        this.ui.renderSidebar();
+        this.ui.renderChecklist();
+        this.ui.renderCertidoes();
+        this.router.init();
+        this.theme.init();
+        this.ui.initScrollTop();
+        setTimeout(() => { if (typeof lucide !== 'undefined') lucide.createIcons(); }, 150);
+        this.ui.updateOverallProgress();
+      },
+
+      router: {
+        init() {
+          window.addEventListener('hashchange', () => this.navigate());
+          this.navigate();
+        },
+        navigate(hash) {
+          if (hash) window.location.hash = hash;
+          const h = (window.location.hash || '#inicio').replace('#', '');
+          const validIds = App.navConfig.map(n => n.id);
+          const sectionId = validIds.includes(h) ? h : 'inicio';
+          App.state.currentSection = sectionId;
+          document.querySelectorAll('.main-content > section').forEach(s => s.classList.toggle('active', s.id === sectionId));
+          this.highlightActive(sectionId);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          App.ui.closeMobileSidebar();
+          setTimeout(() => { if (typeof lucide !== 'undefined') lucide.createIcons(); }, 50);
+        },
+        highlightActive(id) {
+          document.querySelectorAll('.nav-item').forEach(item => item.classList.toggle('active', item.dataset.section === id));
+        }
+      },
+
+      theme: {
+        current: 'light',
+        init() {
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            this.current = 'dark'; this.apply();
+          }
+          document.getElementById('theme-toggle-btn').addEventListener('click', () => this.toggle());
+        },
+        toggle() { this.current = this.current === 'light' ? 'dark' : 'light'; this.apply(); },
+        apply() {
+          document.documentElement.setAttribute('data-theme', this.current);
+          const btn = document.getElementById('theme-toggle-btn');
+          btn.innerHTML = this.current === 'dark' ? '<i data-lucide="sun"></i><span>Modo Claro</span>' : '<i data-lucide="moon"></i><span>Modo Escuro</span>';
+          if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+      },
+
+      calculator: {
+        compute() {
+          const a = parseCurrency(document.getElementById('calc-a'));
+          let b = 0;
+          document.querySelectorAll('.repasse-input').forEach(inp => b += parseCurrency(inp));
+          const rend = parseCurrency(document.getElementById('calc-rend'));
+          const iof = parseCurrency(document.getElementById('calc-iof'));
+          const ir = parseCurrency(document.getElementById('calc-ir'));
+          const c = rend - iof - ir;
+          const d = parseCurrency(document.getElementById('calc-d'));
+          const e = a + b + c + d;
+          const f = parseCurrency(document.getElementById('calc-f'));
+          const g = e + f;
+
+          // RH from detailed panel
+          let rh = 0;
+          document.querySelectorAll('.rh-value-input').forEach(inp => rh += parseCurrency(inp));
+          document.getElementById('rh-total-value').textContent = 'R$ ' + fmtBR(rh);
+
+          const loc = parseCurrency(document.getElementById('calc-loc'));
+          const comb = parseCurrency(document.getElementById('calc-comb'));
+          const fin = parseCurrency(document.getElementById('calc-fin'));
+          const out = parseCurrency(document.getElementById('calc-out'));
+          const j = rh + loc + comb + fin + out;
+          const k = e - (j - f);
+          const m = k;
+
+          document.getElementById('calc-c').textContent = fmtBR(c);
+          document.getElementById('calc-e').textContent = fmtBR(e);
+          document.getElementById('calc-g').textContent = fmtBR(g);
+          document.getElementById('calc-j').textContent = fmtBR(j);
+          document.getElementById('calc-g2').textContent = fmtBR(g);
+          document.getElementById('calc-j2').textContent = fmtBR(j);
+          document.getElementById('calc-k').textContent = fmtBR(k);
+          document.getElementById('calc-m').textContent = fmtBR(m);
+
+          // Validation
+          const rendeCheckInput = document.getElementById('calc-rende-check');
+          const rendeCheck = parseCurrency(rendeCheckInput);
+          const vr = document.getElementById('validation-result');
+          if (!rendeCheckInput.value.trim()) {
+            vr.innerHTML = '<div class="validation-indicator neutral"><i data-lucide="minus-circle"></i><span>Informe o saldo do Rende Fácil para verificação</span></div>';
+          } else if (Math.abs(k - rendeCheck) < 0.02) {
+            vr.innerHTML = '<div class="validation-indicator valid"><i data-lucide="check-circle"></i><span>✅ Valores coincidem — (K) = Saldo Rende Fácil</span></div>';
+          } else {
+            vr.innerHTML = `<div class="validation-indicator invalid"><i data-lucide="x-circle"></i><span>❌ Divergência de R$ ${fmtBR(Math.abs(k - rendeCheck))} — Verifique os lançamentos</span></div>`;
+          }
+
+          App.state.calculatorValues = { a, b, c, d, e, f, g, j, k, m, rend, iof, ir, rh, loc, comb, fin, out };
+          if (typeof lucide !== 'undefined') lucide.createIcons();
+        },
+
+        handleRHEnter(e, input) {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            this.addRH();
+            setTimeout(() => {
+              const inputs = document.querySelectorAll('.rh-value-input');
+              if (inputs.length > 0) inputs[inputs.length - 1].focus();
+            }, 10);
+          }
+        },
+
+        copyField(id) {
+          const el = document.getElementById(id);
+          if (!el) return;
+          navigator.clipboard.writeText(el.textContent.trim()).then(() => {
+            App.ui.showToast('Valor copiado!');
+          });
+        },
+
+        addRepasse() {
+          const list = document.getElementById('repasse-list');
+          const entry = document.createElement('div');
+          entry.className = 'repasse-entry';
+          entry.innerHTML = `<div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input repasse-input" placeholder="0,00" inputmode="numeric"></div><button class="remove-entry-btn" onclick="this.parentElement.remove(); App.calculator.compute();" title="Remover"><i data-lucide="x"></i></button>`;
+          list.appendChild(entry);
+          if (typeof lucide !== 'undefined') lucide.createIcons();
+        },
+
+        toggleRH() {
+          App.state.rhExpanded = !App.state.rhExpanded;
+          document.getElementById('rh-panel-body').classList.toggle('open', App.state.rhExpanded);
+          document.getElementById('rh-chevron').style.transform = App.state.rhExpanded ? 'rotate(180deg)' : 'rotate(0)';
+        },
+
+        addRH() {
+          const list = document.getElementById('rh-entries');
+          const entry = document.createElement('div');
+          entry.className = 'rh-entry';
+          entry.innerHTML = `<div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input rh-value-input" placeholder="0,00" inputmode="numeric" onkeypress="App.calculator.handleRHEnter(event, this)"></div><button class="remove-entry-btn" onclick="App.calculator.removeRH(this)" title="Remover"><i data-lucide="x"></i></button>`;
+          list.appendChild(entry);
+          if (typeof lucide !== 'undefined') lucide.createIcons();
+        },
+
+        removeRH(btn) {
+          const entry = btn.closest('.rh-entry');
+          const list = document.getElementById('rh-entries');
+          if (list.children.length > 1) { entry.remove(); this.compute(); }
+          else App.ui.showToast('Deve haver pelo menos uma linha.');
+        },
+
+        copyToClipboard() {
+          const v = App.state.calculatorValues;
+          if (!v || Object.keys(v).length === 0) { App.ui.showToast('Preencha a calculadora antes de copiar.'); return; }
+          // Gather RH totals since names are removed
+          const rhLines = `    (Lançamentos rápidos via painel)\n`;
+          const text = `DEMONSTRATIVO RP-10 — COOPERPOSSE\n==============================================\n\nRECURSOS DISPONÍVEIS NO EXERCÍCIO:\n(A) Saldo do exercício anterior:          R$ ${fmtBR(v.a)}\n(B) Repasses públicos no exercício:       R$ ${fmtBR(v.b)}\n(C) Receitas c/ aplicações financeiras:   R$ ${fmtBR(v.c)}\n    Rendimento bruto: R$ ${fmtBR(v.rend)} | IOF: R$ ${fmtBR(v.iof)} | IR: R$ ${fmtBR(v.ir)}\n(D) Outras receitas:                      R$ ${fmtBR(v.d)}\n(E) TOTAL RECURSOS PÚBLICOS (A+B+C+D):   R$ ${fmtBR(v.e)}\n(F) Recursos próprios da entidade:        R$ ${fmtBR(v.f)}\n(G) TOTAL DISPONÍVEL (E+F):              R$ ${fmtBR(v.g)}\n\nDESPESAS PAGAS NO EXERCÍCIO:\n  Recursos humanos (total):               R$ ${fmtBR(v.rh)}\n${rhLines}  Locação de imóveis:                     R$ ${fmtBR(v.loc)}\n  Combustível:                            R$ ${fmtBR(v.comb)}\n  Despesas financeiras/bancárias:         R$ ${fmtBR(v.fin)}\n  Outras despesas:                        R$ ${fmtBR(v.out)}\n(J) TOTAL DESPESAS:                       R$ ${fmtBR(v.j)}\n\nDEMONSTRATIVO DO SALDO FINANCEIRO:\n(G) Total recursos disponíveis:           R$ ${fmtBR(v.g)}\n(J) Despesas pagas:                       R$ ${fmtBR(v.j)}\n(K) Recurso público não aplicado [E-(J-F)]: R$ ${fmtBR(v.k)}\n(L) Valor devolvido:                      R$ 0,00\n(M) Valor autorizado p/ exercício seg.:   R$ ${fmtBR(v.m)}\n\n==============================================\nTermo de Colaboração nº 12/2026 — Recurso Municipal`;
+          navigator.clipboard.writeText(text).then(() => App.ui.showToast('Resumo copiado para a área de transferência!')).catch(() => {
+            const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); App.ui.showToast('Resumo copiado!');
+          });
+        },
+
+        reset() {
+          document.querySelectorAll('#rp10-calculator .money-input').forEach(inp => { inp.value = ''; });
+          document.getElementById('calc-loc').value = '2.500,00';
+          document.getElementById('repasse-list').innerHTML = `<div class="repasse-entry"><div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input repasse-input" placeholder="0,00" inputmode="numeric"></div></div>`;
+          document.getElementById('rh-entries').innerHTML = `<div class="rh-entry"><div class="calc-input-wrapper"><span class="calc-input-prefix">R$</span><input type="text" class="calc-input money-input rh-value-input" placeholder="0,00" inputmode="numeric" onkeypress="App.calculator.handleRHEnter(event, this)"></div><button class="remove-entry-btn" onclick="App.calculator.removeRH(this)" title="Remover"><i data-lucide="x"></i></button></div>`;
+          this.compute();
+          if (typeof lucide !== 'undefined') lucide.createIcons();
+        },
+
+        computeAux() {
+          const rend = parseCurrency(document.getElementById('aux-rend'));
+          const iof = parseCurrency(document.getElementById('aux-iof'));
+          const ir = parseCurrency(document.getElementById('aux-ir'));
+          document.getElementById('aux-result').textContent = fmtBR(rend - iof - ir);
+        },
+
+        copyAux() {
+          const val = document.getElementById('aux-result').textContent;
+          navigator.clipboard.writeText('R$ ' + val).then(() => App.ui.showToast('Valor copiado: R$ ' + val));
+        }
+      },
+
+      // Aux calculator also uses money inputs — delegate via input event above
+      // but we need to also trigger computeAux
+      initAuxCalc() {
+        ['aux-rend','aux-iof','aux-ir'].forEach(id => {
+          document.getElementById(id).addEventListener('input', () => this.calculator.computeAux());
+        });
+      },
+
+      checklist: {
+        toggle(idx) {
+          App.state.checklistItems[idx] = !App.state.checklistItems[idx];
+          this.updateUI();
+        },
+        getProgress() {
+          const items = Object.values(App.state.checklistItems);
+          const done = items.filter(Boolean).length;
+          return { done, total: items.length, pct: Math.round((done / items.length) * 100) };
+        },
+        updateUI() {
+          const { done, total, pct } = this.getProgress();
+          document.getElementById('checklist-count').textContent = `${done} de ${total} itens concluídos`;
+          document.getElementById('checklist-pct').textContent = `${pct}%`;
+          document.getElementById('checklist-fill').style.width = `${pct}%`;
+          document.querySelectorAll('.checklist-item').forEach((item, i) => item.classList.toggle('checked', App.state.checklistItems[i]));
+
+          // Orchestrate sections status based on checklist pct
+          const autoStatus = pct === 100 ? 'concluido' : pct > 0 ? 'andamento' : 'pendente';
+          App.navConfig.forEach(n => {
+            if (n.id !== 'inicio') {
+              App.state.sectionStatuses[n.id] = autoStatus;
+              const badge = document.querySelector(`.nav-badge[data-section-badge="${n.id}"]`);
+              if (badge) { badge.setAttribute('data-status', autoStatus); badge.textContent = App.statusLabels[autoStatus]; }
+            }
+          });
+          
+          App.ui.updateOverallProgress();
+        },
+        reset() {
+          Object.keys(App.state.checklistItems).forEach(k => App.state.checklistItems[k] = false);
+          this.updateUI();
+          App.ui.showToast('Checklist resetado para novo mês!');
+        }
+      },
+
+      ui: {
+        renderSidebar() {
+          const nav = document.getElementById('sidebar-nav');
+          nav.innerHTML = App.navConfig.map(n => {
+            const status = App.state.sectionStatuses[n.id];
+            return `<a class="nav-item" href="#${n.id}" data-section="${n.id}" onclick="event.preventDefault(); App.router.navigate('#${n.id}');"><i data-lucide="${n.icon}"></i><span class="nav-item-label">${n.label}</span><span class="nav-badge" data-status="${status}" data-section-badge="${n.id}" onclick="event.stopPropagation(); event.preventDefault(); App.ui.cycleStatus('${n.id}');" title="Clique para alterar o status">${App.statusLabels[status]}</span></a>`;
+          }).join('');
+          document.getElementById('hamburger-btn').addEventListener('click', () => this.toggleMobileSidebar());
+          document.getElementById('sidebar-overlay').addEventListener('click', () => this.closeMobileSidebar());
+        },
+
+        renderChecklist() {
+          const container = document.getElementById('checklist-container');
+          let idx = 0;
+          container.innerHTML = App.checklistConfig.map(group => {
+            const items = group.items.map(label => {
+              const html = `<div class="checklist-item" data-idx="${idx}" onclick="App.checklist.toggle(${idx})"><div class="checklist-checkbox"><i data-lucide="check"></i></div><span class="checklist-label">${label}</span></div>`;
+              idx++; return html;
+            }).join('');
+            return `<div class="checklist-group"><div class="checklist-group-title">${group.group}</div>${items}</div>`;
+          }).join('');
+        },
+
+        renderCertidoes() {
+          const body = document.getElementById('certidoes-body');
+          body.innerHTML = App.certidoesConfig.map((c, i) => {
+            const notaHtml = c.nota ? `<div class="certidao-nota"><i data-lucide="key"></i> ${c.nota}</div>` : '';
+            return `<tr>
+              <td style="text-align:center;font-weight:700;color:var(--color-primary)">${c.num}</td>
+              <td><span class="certidao-nome">${c.nome}</span>${notaHtml}</td>
+              <td style="text-align:center"><a href="${c.url}" target="_blank" rel="noopener" class="certidao-link"><i data-lucide="external-link"></i> Acessar</a></td>
+            </tr>`;
+          }).join('');
+        },
+
+        cycleStatus(sectionId) {
+          const current = App.state.sectionStatuses[sectionId];
+          const idx = App.statusCycle.indexOf(current);
+          App.state.sectionStatuses[sectionId] = App.statusCycle[(idx + 1) % App.statusCycle.length];
+          const badge = document.querySelector(`.nav-badge[data-section-badge="${sectionId}"]`);
+          if (badge) { badge.setAttribute('data-status', App.state.sectionStatuses[sectionId]); badge.textContent = App.statusLabels[App.state.sectionStatuses[sectionId]]; }
+          
+          this.updateOverallProgress();
+        },
+
+        toggleMobileSidebar() {
+          document.getElementById('sidebar').classList.toggle('open');
+          document.getElementById('sidebar-overlay').classList.toggle('visible');
+        },
+        closeMobileSidebar() {
+          document.getElementById('sidebar').classList.remove('open');
+          document.getElementById('sidebar-overlay').classList.remove('visible');
+        },
+
+        showToast(msg) {
+          const toast = document.getElementById('toast');
+          document.getElementById('toast-msg').textContent = msg;
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 3000);
+        },
+
+        updateOverallProgress() {
+          const totalTabs = App.navConfig.length;
+          let concludedTabs = 0;
+          App.navConfig.forEach(n => {
+            if (App.state.sectionStatuses[n.id] === 'concluido') {
+              concludedTabs++;
+            }
+          });
+          const pct = totalTabs === 0 ? 0 : Math.round((concludedTabs / totalTabs) * 100);
+          this.updateProgressRing(pct, concludedTabs, totalTabs);
+        },
+
+        updateProgressRing(pct, done, total) {
+          const circumference = 2 * Math.PI * 24; // r=24
+          const offset = circumference - (pct / 100) * circumference;
+          const fill = document.getElementById('progress-ring-fill');
+          fill.style.strokeDashoffset = offset;
+          document.getElementById('progress-ring-text').textContent = pct + '%';
+          const container = document.getElementById('progress-ring-container');
+          container.title = `${done} de ${total} abas concluídas`;
+          if (pct >= 100) {
+            fill.style.stroke = 'var(--color-success)';
+            container.classList.add('complete');
+          } else {
+            fill.style.stroke = 'var(--color-primary)';
+            container.classList.remove('complete');
+          }
+        },
+
+        initScrollTop() {
+          const btn = document.getElementById('scroll-top-btn');
+          window.addEventListener('scroll', () => {
+            btn.classList.toggle('visible', window.scrollY > 300);
+          });
+          btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        }
+      },
+
+      miniCheck(el) { el.classList.toggle('checked'); },
+
+      toggleExpand(header) {
+        header.classList.toggle('open');
+        const body = header.nextElementSibling;
+        if (body) body.classList.toggle('open');
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      App.init();
+      App.initAuxCalc();
+    });
+  </script>
+</body>
+</html>
